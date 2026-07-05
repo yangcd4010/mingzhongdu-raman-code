@@ -46,4 +46,5 @@ This repository is intended for code availability and reproducibility of the Ram
 
 ## Citation
 
-If using this code, cite the associated manuscript and this repository URL.
+If using this code, cite the associated manuscript and this repository:
+https://github.com/yangcd4010/mingzhongdu-raman-code
