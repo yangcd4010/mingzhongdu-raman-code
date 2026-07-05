@@ -1,0 +1,45 @@
+group,group_label,band,phase,target_cm-1,observed_cm-1,normalized_height,n_spectra
+1,"S1, red surface",Hem_225,hematite,225.0,224.849,0.44571914669592666,7
+1,"S1, red surface",Hem_294,hematite,294.0,293.83,1.0602908166934342,7
+1,"S1, red surface",Hem_412,hematite,412.0,411.944,0.5945948245287881,7
+1,"S1, red surface",Hem_613,hematite,613.0,613.13,0.34118724906588843,7
+1,"S1, red surface",Gyp_1006,gypsum,1006.0,1006.06,0.6237263420258322,7
+1,"S1, red surface",Gyp_1134,gypsum,1134.0,1133.68,0.10450684386959665,7
+1,"S1, red surface",Cal_279,calcite,279.0,284.878,0.787506397116238,7
+1,"S1, red surface",Cal_711,calcite,711.0,708.393,0.00836372082221828,7
+1,"S1, red surface",Cal_1085,calcite,1085.0,1087.15,0.05013488225941313,7
+1,"S1, red surface",C_1350,carbon_D,1350.0,1343.17,0.048688245919809615,7
+1,"S1, red surface",C_1580,carbon_G,1580.0,1582.55,0.01253150171921441,7
+2,"S2, pink-red surface",Hem_225,hematite,225.0,227.864,0.6333964820180044,9
+2,"S2, pink-red surface",Hem_294,hematite,294.0,293.83,1.0533432181276297,9
+2,"S2, pink-red surface",Hem_412,hematite,412.0,411.944,0.7994379917064411,9
+2,"S2, pink-red surface",Hem_613,hematite,613.0,610.304,0.46446664037589525,9
+2,"S2, pink-red surface",Gyp_1006,gypsum,1006.0,1006.06,0.4138568490442827,9
+2,"S2, pink-red surface",Gyp_1134,gypsum,1134.0,1138.82,0.06831267071504216,9
+2,"S2, pink-red surface",Cal_279,calcite,279.0,284.878,0.8702677774705888,9
+2,"S2, pink-red surface",Cal_711,calcite,711.0,713.947,0.13000958079025987,9
+2,"S2, pink-red surface",Cal_1085,calcite,1085.0,1081.95,0.024274931432945193,9
+2,"S2, pink-red surface",C_1350,carbon_D,1350.0,1343.17,0.06070276943113838,9
+2,"S2, pink-red surface",C_1580,carbon_G,1580.0,1587.28,0.11330175520268775,9
+3,"S4, coloured surface points",Hem_225,hematite,225.0,227.864,0.49535670888671246,17
+3,"S4, coloured surface points",Hem_294,hematite,294.0,293.83,1.1066199043666751,17
+3,"S4, coloured surface points",Hem_412,hematite,412.0,411.944,0.5825045165021985,17
+3,"S4, coloured surface points",Hem_613,hematite,613.0,613.13,0.30741261915748896,17
+3,"S4, coloured surface points",Gyp_1006,gypsum,1006.0,1006.06,0.31095307187360965,17
+3,"S4, coloured surface points",Gyp_1134,gypsum,1134.0,1136.25,0.07316082242850884,17
+3,"S4, coloured surface points",Cal_279,calcite,279.0,284.878,0.8220843889254442,17
+3,"S4, coloured surface points",Cal_711,calcite,711.0,705.613,0.008359408497256218,17
+3,"S4, coloured surface points",Cal_1085,calcite,1085.0,1084.55,0.029220256028861347,17
+3,"S4, coloured surface points",C_1350,carbon_D,1350.0,1343.17,0.057853079708483975,17
+3,"S4, coloured surface points",C_1580,carbon_G,1580.0,1575.46,0.053676694556460965,17
+4,"S2-FW, fresh white fracture",Hem_225,hematite,225.0,230.878,0.08962157809959671,6
+4,"S2-FW, fresh white fracture",Hem_294,hematite,294.0,287.863,0.8697158178216217,6
+4,"S2-FW, fresh white fracture",Hem_412,hematite,412.0,411.944,0.02869864426148599,6
+4,"S2-FW, fresh white fracture",Hem_613,hematite,613.0,607.477,0.04116033962275437,6
+4,"S2-FW, fresh white fracture",Gyp_1006,gypsum,1006.0,998.151,0.03409231229921799,6
+4,"S2-FW, fresh white fracture",Gyp_1134,gypsum,1134.0,1141.39,0.026375103166248515,6
+4,"S2-FW, fresh white fracture",Cal_279,calcite,279.0,278.901,1.1016332146398076,6
+4,"S2-FW, fresh white fracture",Cal_711,calcite,711.0,711.17,0.20134526874845007,6
+4,"S2-FW, fresh white fracture",Cal_1085,calcite,1085.0,1084.55,0.9626448423847931,6
+4,"S2-FW, fresh white fracture",C_1350,carbon_D,1350.0,1343.17,0.029365493186981798,6
+4,"S2-FW, fresh white fracture",C_1580,carbon_G,1580.0,1587.28,0.02231877948415048,6

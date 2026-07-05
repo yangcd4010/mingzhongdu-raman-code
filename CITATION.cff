@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated manuscript and this repository."
+title: "Ming Zhongdu V35 Raman processing code"
+authors:
+  - family-names: Yang
+    given-names: Chengda
+  - family-names: Zhou
+    given-names: Xueying
+  - family-names: Wang
+    given-names: Zhi
+date-released: 2026-07-05
+version: "1.0.0"
+
