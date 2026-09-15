@@ -1,6 +1,6 @@
 # Ming Zhongdu Raman processing code
 
-Version 2.0.0 reproduces the Raman workflow in the V25 revised manuscript, *Reconciling low bulk iron with microscale hematite evidence in pink lime plaster from Ming Zhongdu*. It computes per-spectrum peak matches, screening counts, sensitivity checks, the Raman panels of Figure 5, and Supplementary Figure 1.
+Version 2.0.1 reproduces the Raman workflow in the V25 revised manuscript, *Reconciling low bulk iron with microscale hematite evidence in pink lime plaster from Ming Zhongdu*. It computes per-spectrum peak matches, screening counts, sensitivity checks, the Raman panels of Figure 5, and Supplementary Figure 1.
 
 ## Run
 
@@ -26,7 +26,7 @@ python scripts/raman_pipeline.py --check-reference --skip-figures
 - `data/raw/`: 39 numerical two-column spectra (Raman shift in cm⁻¹ and original detector counts), retaining every acquisition point at round-trip floating-point precision. Instrument headers and workstation metadata are excluded. Each file contains 976 points, spanning 102.984–2498.39 cm⁻¹.
 - `data/raw_manifest.json`: spectrum identifiers, source-group paths, point counts, ranges and file checksums.
 - `data/rruff/`: the four processed RRUFF reference spectra used in Figure 5c, with their original source metadata retained.
-- `reference_outputs/`: unchanged numerical tables exported from Supplementary Data 1 of the submitted V25 package. These are comparison targets, not computed replacements. The `_v03` filenames retain the established numerical-table identifiers; the software version is 2.0.0.
+- `reference_outputs/`: unchanged numerical tables exported from Supplementary Data 1 of the submitted V25 package. These are comparison targets, not computed replacements. The `_v03` filenames retain the established numerical-table identifiers; the software version is 2.0.1.
 
 Source groups 1, 2 and 3 correspond to S1, S2 and S4. Group 4 is retained as an archival source-group identifier. Its assignment to an S2 fresh white fracture is not established by the spectrum metadata.
 
@@ -59,9 +59,9 @@ The figures are regenerated from the same numerical records. Font metrics and re
 
 ## Version history and citation
 
-The earlier release, named `v1.1.0` with Git tag `zhongdu`, remains archived at https://doi.org/10.5281/zenodo.21224833. That DOI describes the earlier “Ming Zhongdu V35 Raman processing code” package. It does **not** identify version 2.0.0.
+The earlier release, named `v1.1.0` with Git tag `zhongdu`, remains archived at https://doi.org/10.5281/zenodo.21224833. That DOI describes the earlier “Ming Zhongdu V35 Raman processing code” package. It does **not** identify version 2.0.1.
 
-Version 2.0.0 uses 5-point smoothing, maximum normalisation, qualifying local peaks with prominence, and the Group 4 label. It replaces the earlier workflow's 15-point smoothing, percentile normalisation and S2-FW label. Previous outputs remain available through the earlier Git tag and Zenodo record. The former SEM map-display helper is not part of this Raman workflow.
+Version 2.0.1 uses 5-point smoothing, maximum normalisation, qualifying local peaks with prominence, and the Group 4 label. It replaces the earlier workflow's 15-point smoothing, percentile normalisation and S2-FW label. Previous outputs remain available through the earlier Git tag and Zenodo record. The former SEM map-display helper is not part of this Raman workflow.
 
 Use `CITATION.cff` for this version's authors and software title, and cite the specific Git commit or release used. A new Zenodo DOI must be added only after a new archive has actually been published.
 

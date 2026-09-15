@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0 — 2026-09-16
+## 2.0.1 — 2026-09-16
 
 - Align the numerical workflow with the V25 revised manuscript: AsLS baseline correction, SG 5/3 smoothing, maximum normalisation over 100–1800 cm⁻¹, and local-peak screening with height and prominence thresholds.
 - Retain Group 4 as an archival identifier instead of assigning its spectra to S2-FW.
