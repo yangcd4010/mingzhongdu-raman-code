@@ -1,53 +1,72 @@
-# Ming Zhongdu V35 Raman Processing Code
+# Ming Zhongdu Raman processing code
 
-This repository contains the custom scripts and tabular input needed to reproduce the Raman preprocessing, diagnostic-band extraction, threshold-sensitivity checks and summary figure generation used for the Ming Zhongdu Wumen Gate pink lime plaster manuscript.
+Version 2.0.0 reproduces the Raman workflow in the V25 revised manuscript, *Reconciling low bulk iron with microscale hematite evidence in pink lime plaster from Ming Zhongdu*. It computes per-spectrum peak matches, screening counts, sensitivity checks, the Raman panels of Figure 5, and Supplementary Figure 1.
 
-## Contents
+## Run
 
-- `scripts/raman_pipeline.py` - reruns Raman baseline correction, Savitzky-Golay smoothing, percentile normalisation, diagnostic-band extraction, operational hematite screening and sensitivity checks.
-- `scripts/fe_map_display.py` - generic display-only helper for SEM-EDS Fe map visualisation. Raw elemental-map image data are not included.
-- `data/raman_processed_long.csv` - long-format Raman spectral table containing raw intensities and the archived processed columns used in the manuscript workflow.
-- `reference_outputs/` - reference CSV outputs generated from the original manuscript workflow.
-- `outputs/` - default destination for regenerated tables and figures.
+Python 3.12 was used for validation. Install the pinned dependencies in a virtual environment:
 
-## Reproduce Raman Outputs
-
-Install dependencies:
-
-```bash
+```sh
+python -m venv .venv
+# Activate the environment using the command appropriate for your shell.
 python -m pip install -r requirements.txt
-```
-
-Run the pipeline:
-
-```bash
 python scripts/raman_pipeline.py --check-reference
 ```
 
-The script writes regenerated outputs to `outputs/`:
+The default input and output paths are relative to the repository, so the script can be called from another working directory. For numerical verification without plots:
 
-- `raman_processed_long.csv`
-- `raman_group_mean.csv`
-- `raman_diagnostic_bands.csv`
-- `raman_diagnostic_band_group_scores.csv`
-- `raman_single_spectrum_hematite_screen.csv`
-- `raman_hematite_positive_summary.csv`
-- `raman_operational_criterion_sensitivity.csv`
-- `raman_summary_figure.png`
-- `raman_summary_figure.svg`
+```sh
+python scripts/raman_pipeline.py --check-reference --skip-figures
+```
 
-## Operational Screening Definition
+`--input-dir`, `--output-dir` and `--reference-dir` accept alternative directories. A failed comparison exits with an error. Results and verification reports are written under `outputs/`.
 
-A spectrum is classified as operationally hematite-screen-positive only when the three core bands near 225, 412 and 613 cm-1 all show local maxima within +/-8 cm-1 of the target positions and each has normalised peak height >=0.10 in the same smoothed, baseline-corrected and percentile-normalised spectrum. The 294 cm-1 band is retained as supporting evidence only and is not used for the positive call.
+## Input and reference files
 
-## Data Scope
+- `data/raw/`: 39 numerical two-column spectra (Raman shift in cm⁻¹ and original detector counts), retaining every acquisition point at round-trip floating-point precision. Instrument headers and workstation metadata are excluded. Each file contains 976 points, spanning 102.984–2498.39 cm⁻¹.
+- `data/raw_manifest.json`: spectrum identifiers, source-group paths, point counts, ranges and file checksums.
+- `data/rruff/`: the four processed RRUFF reference spectra used in Figure 5c, with their original source metadata retained.
+- `reference_outputs/`: unchanged numerical tables exported from Supplementary Data 1 of the submitted V25 package. These are comparison targets, not computed replacements. The `_v03` filenames retain the established numerical-table identifiers; the software version is 2.0.0.
 
-This repository is intended for code availability and reproducibility of the Raman screening workflow. Heritage-sensitive site coordinates, sampling-location details, field photographs and conservation records are not included. Raw SEM-EDS image/map data are also not included because they are controlled by the relevant data custodian.
+Source groups 1, 2 and 3 correspond to S1, S2 and S4. Group 4 is retained as an archival source-group identifier. Its assignment to an S2 fresh white fracture is not established by the spectrum metadata.
 
-## Citation
+## Processing and screening
 
-If using this code, cite the associated manuscript and this repository:
-https://github.com/yangcd4010/mingzhongdu-raman-code
+1. Apply asymmetric least-squares baseline correction to each full recorded spectrum: lambda = 1,000,000; p = 0.01; 12 iterations.
+2. Clip negative baseline-subtracted values to zero; apply a 5-point, third-order Savitzky–Golay filter (`mode="interp"`); clip negative values again.
+3. Divide by the maximum processed intensity over 100–1800 cm⁻¹.
+4. Detect local peaks over 100–1800 cm⁻¹ with height ≥0.10 and prominence ≥0.03. The minimum peak distance is `max(1, round(8 / median_grid_step))` acquisition points. Within each ±8 cm⁻¹ target window, select the qualifying local peak nearest the target.
+5. Call a spectrum screen-positive only if the 225, 412 and 613 cm⁻¹ targets all match. The 294 cm⁻¹ band is supporting evidence. The 1006 cm⁻¹ match is reported separately.
 
-Archived release DOI:
-https://doi.org/10.5281/zenodo.21224833
+Sensitivity checks use half-widths of 6 and 8 cm⁻¹ and height thresholds of 0.08, 0.10 and 0.12, with prominence fixed at 0.03. This produces 24 group-level rows (six parameter combinations × four groups).
+
+Figure 5a uses unmodified recorded counts. Supplementary Figure 1 uses only a per-spectrum minimum shift and constant vertical offsets. RRUFF curves are minimum-shifted and independently maximum-normalised over their available ranges. They are not processed as new experimental spectra.
+
+## Verified results
+
+| Group | Screen-positive / total |
+|---|---:|
+| S1 | 7 / 7 |
+| S2 | 9 / 9 |
+| S4 | 17 / 17 |
+| Group 4 | 0 / 6 |
+
+The 1006 cm⁻¹ match occurs in 26 of the 33 coloured-point spectra. The representative spectra are `1-YDC_16`, `2-YDC_9`, `3-YDC_9` and `4-YDC`. RRUFF reference window matches are hematite 3/3, maghemite 2/3, magnetite 0/3 and goethite 0/3.
+
+`--check-reference` compares all fields in the 39-row screening table, the 24-row sensitivity table and the 38,064-row processed table against the manuscript workbook export. Numerical tolerances respect the stored decimal precision. It also checks counts, representative identities and reference-spectrum matches. See `outputs/verification.json` and `outputs/summary.json` after running.
+
+The figures are regenerated from the same numerical records. Font metrics and rendering can vary across operating systems; pixel-identical figure files are not the numerical verification criterion.
+
+## Version history and citation
+
+The earlier release, named `v1.1.0` with Git tag `zhongdu`, remains archived at https://doi.org/10.5281/zenodo.21224833. That DOI describes the earlier “Ming Zhongdu V35 Raman processing code” package. It does **not** identify version 2.0.0.
+
+Version 2.0.0 uses 5-point smoothing, maximum normalisation, qualifying local peaks with prominence, and the Group 4 label. It replaces the earlier workflow's 15-point smoothing, percentile normalisation and S2-FW label. Previous outputs remain available through the earlier Git tag and Zenodo record. The former SEM map-display helper is not part of this Raman workflow.
+
+Use `CITATION.cff` for this version's authors and software title, and cite the specific Git commit or release used. A new Zenodo DOI must be added only after a new archive has actually been published.
+
+## RRUFF sources
+
+The reference spectra are third-party data from RRUFF: hematite R060190 (785 nm), maghemite R140712 (780 nm), magnetite R080025 (780 nm), and goethite R050142 (780 nm). Their sample pages are linked in the generated `RRUFF_reference_Raman_manifest.csv`. Original source: https://www.rruff.net/zipped_data_files/raman/excellent_unoriented.zip. Preserve the supplied source metadata and attribution when reusing these files.
+
+Lafuente, B., Downs, R. T., Yang, H. & Stone, N. The power of databases: the RRUFF project. In *Highlights in Mineralogical Crystallography* (eds Armbruster, T. & Danisi, R. M.) 1–30 (De Gruyter, 2015).

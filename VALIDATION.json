@@ -1,0 +1,59 @@
+{
+  "validated_at": "2026-09-16",
+  "python": "3.12",
+  "numpy": "2.3.5",
+  "scipy": "1.16.1",
+  "matplotlib": "3.10.7",
+  "comparisons": {
+    "Raman_screening_results_v03.csv": {
+      "rows": 39,
+      "pass": true,
+      "max_absolute_errors": {}
+    },
+    "Raman_screening_sensitivity_v03.csv": {
+      "rows": 24,
+      "pass": true,
+      "max_absolute_errors": {}
+    },
+    "Raman_processed_long_v03.csv": {
+      "rows": 38064,
+      "pass": true,
+      "max_absolute_errors": {}
+    }
+  },
+  "results": {
+    "counts": {
+      "S1": [
+        7,
+        7
+      ],
+      "S2": [
+        9,
+        9
+      ],
+      "S4": [
+        17,
+        17
+      ],
+      "Group 4": [
+        0,
+        6
+      ]
+    },
+    "sulfate_positive_coloured_spectra": 26,
+    "rruff_window_matches": {
+      "Hematite": 3,
+      "Maghemite": 2,
+      "Magnetite": 0,
+      "Goethite": 0
+    },
+    "representatives": {
+      "S1": "1-YDC_16",
+      "S2": "2-YDC_9",
+      "S4": "3-YDC_9",
+      "Group 4": "4-YDC"
+    }
+  },
+  "reference_source": "Supplementary_Data_1_Raman_screening.xlsx",
+  "reference_workbook_sha256": "f8089a553d338c01a09faaf9f933a802be41720c06bf660d7f1ad3d22f86438f"
+}

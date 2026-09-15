@@ -1,0 +1,353 @@
+[
+  {
+    "group": "1",
+    "spectrum_id": "1-YDC_11",
+    "path": "1/1-YDC_11.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "4311653b755f86fc127d35c18c50c1179430e439e3e3a899640f00a12b709065"
+  },
+  {
+    "group": "1",
+    "spectrum_id": "1-YDC_12",
+    "path": "1/1-YDC_12.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "d22db9425a10a43aabfdf334d41225b21afa7a1c48b4380c49584475402bf94c"
+  },
+  {
+    "group": "1",
+    "spectrum_id": "1-YDC_13",
+    "path": "1/1-YDC_13.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "2852fa6050d4c3ea8ae9028e35344e511e430af5e9c04603806de8de38b24617"
+  },
+  {
+    "group": "1",
+    "spectrum_id": "1-YDC_14",
+    "path": "1/1-YDC_14.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "fceb15eb2e3f9f866b1d36d6b501008c7ac3f4f72902b3f7d5fa79af913361c7"
+  },
+  {
+    "group": "1",
+    "spectrum_id": "1-YDC_15",
+    "path": "1/1-YDC_15.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "6bd02324be3db39e850b48fbb81b66acb1171543616dd9a09165a0faeee04940"
+  },
+  {
+    "group": "1",
+    "spectrum_id": "1-YDC_16",
+    "path": "1/1-YDC_16.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "9bf398088ec18692cab1c28a081757b3dce09fbfaf97f6d635ee2ce4d7fd19fb"
+  },
+  {
+    "group": "1",
+    "spectrum_id": "1-YDC_17",
+    "path": "1/1-YDC_17.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "09a9d374d5acaecd4f5c5ce16f4a033159834d89ccc83d95358faaf1c96b6d11"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_1",
+    "path": "2/2-YDC_1.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "956505f96040cda1519311e8b4e6647bd5368f49fa7944a9435dcddb478397f6"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_2",
+    "path": "2/2-YDC_2.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "dcf5bfab3ed7323c9b05b72be5af7e1dad8317abee67c935123beb9659f7974f"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_3",
+    "path": "2/2-YDC_3.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "a5f6b400703786a9c9369c05201c96eb29366ff9b4784b999afdda772ee6b155"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_4",
+    "path": "2/2-YDC_4.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "a995ec649f0a8c9eed20071b248ac64eb0affa05fc20d8599d528ac17473a37f"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_5",
+    "path": "2/2-YDC_5.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "7f8d09191857670f19031a0ef7b3008615d362692bd8f43f610bfe2db6396818"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_6",
+    "path": "2/2-YDC_6.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "4506818a3d7aa871d1489a850c7afa347ca63ea5fac1815850f7d6b0191ea5e2"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_7",
+    "path": "2/2-YDC_7.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "70aca8e68b592b7fc20e595d5373ee9598fffc03b30fc2ecb13045afb7548d00"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_8",
+    "path": "2/2-YDC_8.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "47078c468b9625aa141ac096f08d30c3faf26c97de99ce9cfd150bcb35ad4f35"
+  },
+  {
+    "group": "2",
+    "spectrum_id": "2-YDC_9",
+    "path": "2/2-YDC_9.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "586d0bdaa54db5e25e84bb155eff6eb367e4f3668ef8df73bad30b3dbaab2e67"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC",
+    "path": "3/3-1/3-YDC.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "a82639dafea86ea67e2a8bfc347ec3d5836e38fd2d43272ac8b2e3274d0204aa"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_1",
+    "path": "3/3-1/3-YDC_1.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "c9f38ed7ecde79887c73c4ebb7f5c8a26a367542d85bd65a2877cd7c7538b460"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_12",
+    "path": "3/3-1/3-YDC_12.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "17206eb73b3c03d26370e89cae228efdce963442faa428887ecbaf3ffece9f2c"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_2",
+    "path": "3/3-1/3-YDC_2.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "502c3d53a2ed8766ac9c5fe92b3823bd44866f4666fd861611789b8d3b3e8795"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_7",
+    "path": "3/3-1/3-YDC_7.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "b252260944028cde5f7091c60dfee165262c174ab626f4f4b54e0655511fdedf"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_9",
+    "path": "3/3-1/3-YDC_9.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "fdfd7d3cc326d936f80ccd77f55323075e1e4ab5b53fc6eb077740638445db29"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_3",
+    "path": "3/3-2/3-YDC_3.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "aa81c805f6fb7a242e076f83ec444076cd6681acd408bde0d4ae25efd6d67d24"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_4",
+    "path": "3/3-2/3-YDC_4.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "42fa3ce9cdd1f1ecc4c52eb3bdfa8a134571ea07fa5c1f5e6c4b0135ea323e1e"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_5",
+    "path": "3/3-3/3-YDC_5.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "d7b27dd3623deed4f3d068fc065d55ebc49db367918ff15d5a8366e997b86bd5"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_6",
+    "path": "3/3-3/3-YDC_6.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "1e4de2f71486cc74e3df486de81aac0529f1089ff714a580649e06841aea1933"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_8",
+    "path": "3/3-3/3-YDC_8.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "0268bcb8c34d674efcf65b736a9482b2c0d05bfa5e8e7c2cf6b8076323d36a86"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_10",
+    "path": "3/3-YDC_10.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "e0946ee47e8e7957d8fb103dabd40ef204ebfe715845d1afdabb4c802481a635"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_11",
+    "path": "3/3-YDC_11.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "602df118a568ee058253d65169a4eee3445d2fd3301b5699a779a6fdbf9f2c85"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_13",
+    "path": "3/3-YDC_13.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "d6fda5ece6df870a7c9b573c2aefd462a2e290f1d2d4345adb2e943694718e3f"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_14",
+    "path": "3/3-YDC_14.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "55eb4e897cb976c88e0961dc6661c24fe097553e82409c83a2d26944b192d941"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_15",
+    "path": "3/3-YDC_15.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "2926b8a5c0be197bd3b681cb0d129d64b8b28a3ccea061b5c3c6e9c9c0ae59ed"
+  },
+  {
+    "group": "3",
+    "spectrum_id": "3-YDC_16",
+    "path": "3/3-YDC_16.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "79ac9ab3f78f139be421a90b7fd3ec8da1a54085ce9fb9ae8a52dce0f38278cf"
+  },
+  {
+    "group": "4",
+    "spectrum_id": "4-YDC",
+    "path": "4/4-YDC.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "81c20947e7fa76e35e9d16c1f201243a4877eb55066ccc2ee9fdfa0fdd9c7bf0"
+  },
+  {
+    "group": "4",
+    "spectrum_id": "4-YDC_1",
+    "path": "4/4-YDC_1.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "a7a3f96aa0ca363297975e1a25325a6f027ed43bfc3960b385ca535083fe070f"
+  },
+  {
+    "group": "4",
+    "spectrum_id": "4-YDC_2",
+    "path": "4/4-YDC_2.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "30bac6fa3397c4e70a4e2a5a9c22e7d6f2aa4570ee12a3e4e261e800f1bf483e"
+  },
+  {
+    "group": "4",
+    "spectrum_id": "4-YDC_3",
+    "path": "4/4-YDC_3.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "99742fc08c54128aae58561c34a86b7b15deb64c3ad4ee9c5674c96fd72df014"
+  },
+  {
+    "group": "4",
+    "spectrum_id": "4-YDC_4",
+    "path": "4/4-YDC_4.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "9ffd0f8e7731ddf0226773c44cf395c40692ea938ef3c73f25d4e57234f43252"
+  },
+  {
+    "group": "4",
+    "spectrum_id": "4-YDC_5",
+    "path": "4/4-YDC_5.txt",
+    "points": 976,
+    "x_min": 102.984,
+    "x_max": 2498.39,
+    "sha256": "3aab9f104898e8c980fb4d5f5d9c4c1540e80d14beb6a99d49983b9a6caf5698"
+  }
+]

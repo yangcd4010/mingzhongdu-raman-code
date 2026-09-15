@@ -1,0 +1,4 @@
+* text=auto eol=lf
+data/** -text whitespace=cr-at-eol
+data/rruff/*.txt -text -diff
+reference_outputs/** -text whitespace=cr-at-eol
