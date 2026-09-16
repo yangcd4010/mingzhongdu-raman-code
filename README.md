@@ -63,7 +63,9 @@ The earlier release, named `v1.1.0` with Git tag `zhongdu`, remains archived at 
 
 Version 2.0.2 restores the original S2-FW sample identity and within-sample comparison. Version 2.0.1 had used the neutral label Group 4 because its instrument metadata did not state the sample identity; that inference did not account for the author's sample mapping. This correction changes group labels and descriptions only. The 5-point smoothing, maximum normalisation, local-peak screening, all numerical inputs and outputs, and representative spectrum choices are unchanged from v2.0.1. Earlier versions remain accessible through their existing tags and archives.
 
-Use `CITATION.cff` for this version's authors and software title, and cite the specific Git commit or release used. A new Zenodo DOI must be added only after a new archive has actually been published.
+Version 2.0.2 is archived on Zenodo at https://doi.org/10.5281/zenodo.22802683 and available as the [v2.0.2 release](https://github.com/yangcd4010/mingzhongdu-raman-code/releases/tag/v2.0.2). Use `CITATION.cff` and cite this version as:
+
+Yang, C., Zhou, X. & Wang, Z. Ming Zhongdu Raman processing code for the revised manuscript (v2.0.2). Zenodo https://doi.org/10.5281/zenodo.22802683 (2026).
 
 ## RRUFF sources
 
