@@ -1,4 +1,4 @@
-"""Ming Zhongdu Raman workflow matching manuscript V25.
+"""Ming Zhongdu Raman workflow with the S2 fresh white fracture comparison (v2.0.2).
 Run from any directory: python scripts/raman_pipeline.py --check-reference
 """
 from __future__ import annotations
@@ -26,7 +26,7 @@ COLORS = {
     "S1": "#A33F35",
     "S2": "#D16D43",
     "S4": "#7F4C8D",
-    "Group 4": "#438C8A",
+    "S2-FW": "#438C8A",
     "calcite": "#387C53",
     "quartz": "#3E6F9E",
     "gypsum": "#7A5A91",
@@ -35,7 +35,7 @@ COLORS = {
     "magnetite": "#4A4A4A",
     "goethite": "#B69A38",
 }
-RAMAN_GROUPS = [("1", "S1"), ("2", "S2"), ("3", "S4"), ("4", "Group 4")]
+RAMAN_GROUPS = [("1", "S1"), ("2", "S2"), ("3", "S4"), ("4", "S2-FW")]
 RAMAN_TARGETS = (225.0, 294.0, 412.0, 613.0, 1006.0)
 RAMAN_SCREEN_TARGETS = (225.0, 412.0, 613.0)
 RAMAN_HALF_WIDTH = 8.0
@@ -288,7 +288,7 @@ def write_raman_analysis_files(records: list[dict[str, object]]) -> None:
         )
 
     counts = screening_counts(records)
-    expected = {"S1": (7, 7), "S2": (9, 9), "S4": (17, 17), "Group 4": (0, 6)}
+    expected = {"S1": (7, 7), "S2": (9, 9), "S4": (17, 17), "S2-FW": (0, 6)}
     if counts != expected:
         raise ValueError(f"Unexpected Raman screening counts: {counts}")
     sulfate = sum(
@@ -302,7 +302,7 @@ def choose_representatives(records: list[dict[str, object]], raman_root: Path) -
     representatives: dict[str, dict[str, object]] = {}
     for _, label in RAMAN_GROUPS:
         subset = [record for record in records if record["label"] == label]
-        candidates = [record for record in subset if bool(record["positive"])] if label != "Group 4" else subset
+        candidates = [record for record in subset if bool(record["positive"])] if label != "S2-FW" else subset
         matrix: list[list[float]] = []
         for record in candidates:
             x = record["x"]
@@ -445,7 +445,7 @@ def plot_raw_small_multiples(
     representatives: dict[str, dict[str, object]],
 ) -> None:
     raw_grid = gridspec.GridSpecFromSubplotSpec(4, 1, subplot_spec=spec, hspace=0.06)
-    order = ["S2", "S4", "S1", "Group 4"]
+    order = ["S2", "S4", "S1", "S2-FW"]
     axes: list[plt.Axes] = []
     for index, label in enumerate(order):
         record = representatives[label]
@@ -500,7 +500,7 @@ def plot_raw_small_multiples(
         json.dumps(reference_positions, indent=2), encoding="utf-8")
 
 def plot_processed_representatives(ax: plt.Axes, representatives: dict[str, dict[str, object]]) -> None:
-    order = ["Group 4", "S1", "S4", "S2"]
+    order = ["S2-FW", "S1", "S4", "S2"]
     top = 0.0
     for index, label in enumerate(order):
         record = representatives[label]
@@ -615,7 +615,7 @@ def make_figure5(records: list[dict[str, object]], raman_root: Path) -> list[Pat
     ax.text(
         0.0, -0.36,
         "Positive = local maxima within ±8 cm⁻¹ of 225, 412 and 613 cm⁻¹ after AsLS + SG5 processing;\n"
-        "normalised height ≥0.10 and prominence ≥0.03. Group 4 is retained as a neutral source-group label.",
+        "normalised height ≥0.10 and prominence ≥0.03. S2-FW denotes the fresh white fracture of S2.",
         transform=ax.transAxes, ha="left", va="top", fontsize=5.5, wrap=False,
     )
     ax.grid(axis="y", color="#E8E8E8", lw=0.5)
@@ -689,7 +689,7 @@ def make_supplementary_figure_s1(records: list[dict[str, object]]) -> list[Path]
     axes[-1].set_xlabel("Raman shift (cm⁻¹)")
     fig.suptitle("Supplementary Figure 1 | All 39 raw Raman spectra (100–2500 cm⁻¹)",
                  fontsize=8.5, fontweight="bold", y=0.994)
-    fig.text(0.50, 0.972, "a) S1, red. b) S2, orange. c) S4, purple. d) Group 4, teal. k = 1000 counts.\nMinimum-shifted and vertically offset only; no baseline correction, smoothing or normalisation. Grey bands mark 1200–1400 cm⁻¹.",
+    fig.text(0.50, 0.972, "a) S1, red. b) S2, orange. c) S4, purple. d) S2-FW, teal. k = 1000 counts.\nMinimum-shifted and vertically offset only; no baseline correction, smoothing or normalisation. Grey bands mark 1200–1400 cm⁻¹.",
              ha="center", va="top", fontsize=6.0)
     fig.subplots_adjust(left=0.10, right=0.84, top=0.952, bottom=0.052)
 
@@ -750,12 +750,12 @@ def main():
     records=analyse_raman_dataset(args.input_dir)
     write_raman_analysis_files(records)
     counts=screening_counts(records)
-    if counts!={"S1":(7,7),"S2":(9,9),"S4":(17,17),"Group 4":(0,6)}:
+    if counts!={"S1":(7,7),"S2":(9,9),"S4":(17,17),"S2-FW":(0,6)}:
         raise AssertionError(f"Unexpected screening counts: {counts}")
-    sulfate=sum(r["label"]!="Group 4" and r["matches"][1006.] is not None for r in records)
+    sulfate=sum(r["label"]!="S2-FW" and r["matches"][1006.] is not None for r in records)
     assert sulfate==26, sulfate
     reps=choose_representatives(records,args.input_dir)
-    assert {k:r["spectrum_id"] for k,r in reps.items()}=={"S1":"1-YDC_16","S2":"2-YDC_9","S4":"3-YDC_9","Group 4":"4-YDC"}
+    assert {k:r["spectrum_id"] for k,r in reps.items()}=={"S1":"1-YDC_16","S2":"2-YDC_9","S4":"3-YDC_9","S2-FW":"4-YDC"}
     refs=reference_records(); write_rruff_reference_manifest(refs)
     reference_matches={k:sum(r["matches"][t] is not None for t in RAMAN_SCREEN_TARGETS) for k,r in refs.items()}
     assert reference_matches=={"Hematite":3,"Maghemite":2,"Magnetite":0,"Goethite":0}

@@ -1,9 +1,6 @@
 {
-  "validated_at": "2026-09-16",
-  "python": "3.12",
-  "numpy": "2.3.5",
-  "scipy": "1.16.1",
-  "matplotlib": "3.10.7",
+  "validated_at": "2026-09-17",
+  "version": "2.0.2",
   "comparisons": {
     "Raman_screening_results_v03.csv": {
       "rows": 39,
@@ -35,7 +32,7 @@
         17,
         17
       ],
-      "Group 4": [
+      "S2-FW": [
         0,
         6
       ]
@@ -51,9 +48,10 @@
       "S1": "1-YDC_16",
       "S2": "2-YDC_9",
       "S4": "3-YDC_9",
-      "Group 4": "4-YDC"
+      "S2-FW": "4-YDC"
     }
   },
+  "change_scope": "Restore original S2-FW sample mapping; processing and numerical results unchanged.",
   "reference_source": "Supplementary_Data_1_Raman_screening.xlsx",
-  "reference_workbook_sha256": "f8089a553d338c01a09faaf9f933a802be41720c06bf660d7f1ad3d22f86438f"
+  "reference_workbook_sha256": "fc8d38611f39d4cb99eb694817ebe2c4c018571fb441750915dea0038929b9fa"
 }

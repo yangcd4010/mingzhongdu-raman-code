@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.2 — 2026-09-17
+
+- Restore S2-FW as the six-spectrum fresh white fracture comparison within sample S2, following the original manuscript and author-confirmed mapping.
+- Update figure labels, reference-output labels and documentation.
+- Preserve every raw numerical spectrum, processing parameter, screening outcome and representative spectrum from v2.0.1.
+
+
 ## 2.0.1 — 2026-09-16
 
 - Align the numerical workflow with the V25 revised manuscript: AsLS baseline correction, SG 5/3 smoothing, maximum normalisation over 100–1800 cm⁻¹, and local-peak screening with height and prominence thresholds.
