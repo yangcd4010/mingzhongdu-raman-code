@@ -59,11 +59,11 @@ The figures are regenerated from the same numerical records. Font metrics and re
 
 ## Archive and citation
 
-Version 2.0.3 is available as the [GitHub release](https://github.com/yangcd4010/mingzhongdu-raman-code/releases/tag/v2.0.3) and archived on [Zenodo](https://doi.org/10.5281/zenodo.21224832). Cite the specific software version used:
+Version 2.0.3 is available as the [GitHub release](https://github.com/yangcd4010/mingzhongdu-raman-code/releases/tag/v2.0.3) and archived on [Zenodo](https://doi.org/10.5281/zenodo.23639203). Cite the specific software version used:
 
-Yang, C., X. Zhou, and Z. Wang. 2026. *Ming Zhongdu Raman Processing and Screening Code*. V. 2.0.3. Zenodo. https://doi.org/10.5281/zenodo.21224832.
+Yang, C., X. Zhou, and Z. Wang. 2026. *Ming Zhongdu Raman Processing and Screening Code*. V. 2.0.3. Zenodo. https://doi.org/10.5281/zenodo.23639203.
 
-The [concept DOI](https://doi.org/10.5281/zenodo.21224832) provides access to all archived versions. Select version 2.0.3 from the archive to obtain its fixed version DOI.
+The [concept DOI](https://doi.org/10.5281/zenodo.21224832) provides access to all archived versions. The version DOI above fixes the numerical code and data used for this study.
 
 ## RRUFF sources
 
