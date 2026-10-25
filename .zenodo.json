@@ -1,0 +1,28 @@
+{
+  "title": "Ming Zhongdu Raman processing and screening code",
+  "upload_type": "software",
+  "description": "<p>Raman processing and local-peak screening for historic pink-to-red lime finishes at Wumen Gate, Ming Zhongdu. The package contains 39 numerical raw spectra, four RRUFF reference spectra, the processing script and numerical reference outputs.</p>\n<p>Coloured-point spectra from S1, S2 and S4 are compared with six spectra from the fresh white fracture of S2 (S2-FW). The workflow applies asymmetric least-squares baseline correction, five-point Savitzky–Golay smoothing, maximum normalisation and three-band screening near 225, 412 and 613 cm⁻¹. It also reports the sulfate marker near 1006 cm⁻¹, threshold sensitivity and the Raman figures.</p>\n<p>Screening counts are S1 7/7, S2 9/9, S4 17/17 and S2-FW 0/6. Gypsum-related matches occur in 26 of 33 coloured-point spectra. RRUFF window matches are hematite 3/3, maghemite 2/3, magnetite 0/3 and goethite 0/3. Reference comparisons cover 39 screening rows, 24 sensitivity rows and 38,064 processed-spectrum rows.</p>\n<p>Version 2.0.3: <a href=\"https://github.com/yangcd4010/mingzhongdu-raman-code/releases/tag/v2.0.3\">GitHub release</a>.</p>",
+  "creators": [
+    {
+      "name": "Yang, Chengda"
+    },
+    {
+      "name": "Zhou, Xueying"
+    },
+    {
+      "name": "Wang, Zhi"
+    }
+  ],
+  "version": "v2.0.3",
+  "publication_date": "2026-10-25",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "notes": "Please cite the specific software version used.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/yangcd4010/mingzhongdu-raman-code/tree/v2.0.3",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
