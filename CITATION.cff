@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "Please cite the specific release or commit used, as well as the associated manuscript."
-title: "Ming Zhongdu Raman processing code for the revised manuscript"
+message: "Please cite the specific software release or commit used."
+title: "Ming Zhongdu Raman processing and screening code"
 type: software
 authors:
   - family-names: Yang

@@ -1,6 +1,6 @@
-# Ming Zhongdu Raman processing code
+# Ming Zhongdu Raman processing and screening code
 
-Version 2.0.2 reproduces the Raman workflow in the revised manuscript, *Reconciling low bulk iron with microscale hematite evidence in pink lime plaster from Ming Zhongdu*. It computes per-spectrum peak matches, screening counts, sensitivity checks, the Raman panels of Figure 5, and Supplementary Figure 1.
+Version 2.0.2 processes and screens Raman spectra from historic pink-to-red lime finishes at Wumen Gate, Ming Zhongdu. It provides the point-based phase evidence for comparison of coloured surfaces with the fresh white fracture of S2. The code computes per-spectrum peak matches, group screening counts, threshold sensitivity checks, the Raman panels of Figure 5, and Supplementary Figure 1.
 
 ## Run
 
@@ -26,7 +26,7 @@ python scripts/raman_pipeline.py --check-reference --skip-figures
 - `data/raw/`: 39 numerical two-column spectra (Raman shift in cm⁻¹ and original detector counts), retaining every acquisition point at round-trip floating-point precision. Instrument headers and workstation metadata are excluded. Each file contains 976 points, spanning 102.984–2498.39 cm⁻¹.
 - `data/raw_manifest.json`: spectrum identifiers, source-group paths, point counts, ranges and file checksums.
 - `data/rruff/`: the four processed RRUFF reference spectra used in Figure 5c, with their original source metadata retained.
-- `reference_outputs/`: numerical tables exported from Supplementary Data 1, with the fourth group labelled S2-FW to match the restored sample mapping. Numerical values are unchanged from v2.0.1. These are comparison targets, not computed replacements. The `_v03` filenames retain the established numerical-table identifiers; the software version is 2.0.2.
+- `reference_outputs/`: numerical tables exported from Supplementary Data 1, with the fourth group labelled S2-FW. These are comparison targets, not computed replacements. The `_v03` filenames identify the numerical tables; the software version is 2.0.2.
 
 Source folders 1, 2 and 3 correspond to coloured points from S1, S2 and S4. Source folder 4 (4-YDC through 4-YDC_5) contains the six spectra from the fresh white fracture of S2 (S2-FW), as identified in the original manuscript and confirmed by the author. These six spectra provide a within-sample comparison with the nine coloured-surface spectra from S2. Instrument filenames are retained unchanged; Raman and SEM-EDS measurements are not assumed to be fully co-located.
 
@@ -57,15 +57,13 @@ The 1006 cm⁻¹ match occurs in 26 of the 33 coloured-point spectra. The repres
 
 The figures are regenerated from the same numerical records. Font metrics and rendering can vary across operating systems; pixel-identical figure files are not the numerical verification criterion.
 
-## Version history and citation
+## Archive and citation
 
-The earlier release, named `v1.1.0` with Git tag `zhongdu`, remains archived at https://doi.org/10.5281/zenodo.21224833. That DOI describes the earlier “Ming Zhongdu V35 Raman processing code” package. It does **not** identify version 2.0.1.
+Version 2.0.2 is available as the [GitHub release](https://github.com/yangcd4010/mingzhongdu-raman-code/releases/tag/v2.0.2) and archived on [Zenodo](https://doi.org/10.5281/zenodo.22802683). Cite the specific software version used:
 
-Version 2.0.2 restores the original S2-FW sample identity and within-sample comparison. Version 2.0.1 had used the neutral label Group 4 because its instrument metadata did not state the sample identity; that inference did not account for the author's sample mapping. This correction changes group labels and descriptions only. The 5-point smoothing, maximum normalisation, local-peak screening, all numerical inputs and outputs, and representative spectrum choices are unchanged from v2.0.1. Earlier versions remain accessible through their existing tags and archives.
+Yang, C., X. Zhou, and Z. Wang. 2026. *Ming Zhongdu Raman Processing and Screening Code*. V. 2.0.2. Zenodo. https://doi.org/10.5281/zenodo.22802683.
 
-Version 2.0.2 is archived on Zenodo at https://doi.org/10.5281/zenodo.22802683 and available as the [v2.0.2 release](https://github.com/yangcd4010/mingzhongdu-raman-code/releases/tag/v2.0.2). Use `CITATION.cff` and cite this version as:
-
-Yang, C., Zhou, X. & Wang, Z. Ming Zhongdu Raman processing code for the revised manuscript (v2.0.2). Zenodo https://doi.org/10.5281/zenodo.22802683 (2026).
+The [concept DOI](https://doi.org/10.5281/zenodo.21224832) provides access to all archived versions. The version DOI above fixes the numerical code and data used for this study.
 
 ## RRUFF sources
 
